@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مرکز حرفه‌ای برگزاری و معرفی آزمون‌های زبان بین‌المللی">
+  <meta name="theme-color" content="#071b35">
+  <title>نام مجموعه شما | مرکز آزمون‌های زبان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#071b35; --navy2:#0c294b; --cream:#f7efe0; --cream2:#fffaf1;
+      --brown:#654832; --gold:#c99a43; --gold2:#e4bd68; --text:#243043;
+      --muted:#756d63; --white:#fff; --line:rgba(101,72,50,.16);
+      --shadow:0 18px 50px rgba(28,22,13,.10); --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--cream2);color:var(--text);line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    button,input{font:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
+    nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;white-space:nowrap}
+    .logo{width:48px;height:48px;border:2px solid var(--gold2);border-radius:15px;display:grid;place-items:center;color:var(--gold2);font-size:24px}
+    .brand strong{display:block;font-size:16px}.brand small{display:block;color:#c6d0dc;font-size:10px}
+    .navlinks{display:flex;gap:26px;font-size:13px;color:#dbe2ea}
+    .navlinks a{transition:.2s}.navlinks a:hover{color:var(--gold2)}
+    .btn{border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 20px;font-weight:700;transition:.25s}
+    .btn-gold{background:var(--gold2);color:var(--navy)}.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(201,154,67,.25)}
+    .btn-outline{border:1px solid var(--gold);background:transparent;color:var(--brown)}
+    .btn-dark{background:var(--navy);color:#fff}.btn-dark:hover{transform:translateY(-2px)}
+    .hamb{display:none;background:none;border:0;color:#fff;font-size:25px}
+
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#f8eedc,#f5ead6);min-height:650px;display:flex;align-items:center}
+    .hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(201,154,67,.16) 1px,transparent 1px);background-size:18px 18px;mask-image:linear-gradient(90deg,transparent,black,transparent);opacity:.45}
+    .world{position:absolute;inset:50px 0 auto;height:310px;opacity:.16;background:
+      radial-gradient(ellipse at 50% 48%,transparent 0 27%,rgba(201,154,67,.9) 28% 28.5%,transparent 29%),
+      radial-gradient(ellipse at 50% 48%,transparent 0 45%,rgba(201,154,67,.7) 45.3% 45.7%,transparent 46%),
+      radial-gradient(ellipse at 50% 48%,transparent 0 62%,rgba(201,154,67,.5) 62.3% 62.7%,transparent 63%);
+    }
+    .hero-content{position:relative;text-align:center;max-width:760px;margin:auto;z-index:2}
+    .eyebrow{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.5px;margin-bottom:10px}
+    h1{font-size:clamp(38px,5.4vw,68px);line-height:1.18;color:var(--navy);margin-bottom:20px;font-weight:800}
+    .hero p{font-size:17px;color:#5f564d;max-width:650px;margin:0 auto 28px}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .landmarks{position:absolute;left:0;right:0;bottom:0;height:245px;display:flex;align-items:flex-end;justify-content:space-around;pointer-events:none;padding:0 2%}
+    .landmark{color:rgba(92,69,46,.42);text-align:center;filter:drop-shadow(0 4px 2px rgba(60,40,20,.05))}
+    .landmark i{display:block;font-style:normal;font-size:clamp(55px,8vw,105px);line-height:1}
+    .landmark span{font-size:9px;display:block;margin-top:4px}
+    .landmark:nth-child(2) i{font-size:90px}.landmark:nth-child(3) i{font-size:100px}.landmark:nth-child(4) i{font-size:86px}.landmark:nth-child(5) i{font-size:105px}.landmark:nth-child(6) i{font-size:92px}
+
+    section{padding:85px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 40px}
+    .section-head .line{width:70px;height:3px;background:var(--gold);margin:0 auto 12px;border-radius:9px}
+    .section-head h2{font-size:32px;color:var(--navy);margin-bottom:8px}
+    .section-head p{color:var(--muted);font-size:14px}
+    .exams{background:var(--cream2)}
+    .exam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .exam-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column;min-height:300px}
+    .exam-card:hover{transform:translateY(-7px);border-color:rgba(201,154,67,.55)}
+    .exam-logo{height:64px;display:flex;align-items:center;justify-content:flex-start;font-size:29px;font-weight:800;color:var(--navy)}
+    .exam-logo small{font-size:11px;color:var(--gold);display:block;margin-right:7px}
+    .exam-card h3{font-size:19px;color:var(--navy);margin:8px 0}.exam-card p{font-size:13px;color:var(--muted);flex:1}
+    .card-foot{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:10px}.more{font-size:12px;color:var(--brown);font-weight:800}
+    .mini{font-size:11px;color:var(--gold);background:#fbf4e7;padding:6px 10px;border-radius:20px}
+
+    .process{background:#f5ead8}.process-wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:30px;align-items:stretch}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;min-height:460px}
+    .photo{border-radius:18px;overflow:hidden;min-height:210px;background:
+      linear-gradient(145deg,rgba(7,27,53,.05),rgba(101,72,50,.20)),
+      radial-gradient(circle at 65% 30%,#e5d4b9 0 10%,transparent 10.5%),
+      linear-gradient(135deg,#d8c2a3,#f6ead8 52%,#c6a77c)}
+    .photo:nth-child(2){background:linear-gradient(145deg,#cdbda8,#f2e8d8 55%,#9f8b73)}
+    .photo:nth-child(3){background:linear-gradient(145deg,#d6c7b7,#eee2d1 55%,#b89572)}
+    .photo:nth-child(4){background:linear-gradient(145deg,#c6b9a7,#e8d9c5 55%,#8d7861)}
+    .photo:nth-child(5){background:linear-gradient(145deg,#b9aa99,#e9ddcc 55%,#a78662)}
+    .photo:nth-child(6){background:linear-gradient(145deg,#d0c0aa,#f1e5d3 55%,#9d8569)}
+    .process-box{background:var(--navy);color:#fff;border-radius:26px;padding:36px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}
+    .process-box h2{font-size:28px;margin-bottom:10px}.process-box>p{color:#c8d1dc;font-size:13px;margin-bottom:28px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{border:1px solid rgba(228,189,104,.25);border-radius:15px;padding:16px;text-align:center}
+    .step b{color:var(--gold2);font-size:22px;display:block}.step span{font-size:12px}.step p{font-size:10px;color:#9eacbb;margin-top:5px}
+
+    .security{background:var(--navy);color:#fff;position:relative;overflow:hidden}.security .section-head h2{color:#fff}.security .section-head p{color:#b9c5d2}
+    .security-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.security-card{border:1px solid rgba(228,189,104,.25);padding:25px 16px;border-radius:18px;text-align:center;background:rgba(255,255,255,.025)}
+    .shield{font-size:31px;color:var(--gold2);margin-bottom:8px}.security-card h3{font-size:14px;margin-bottom:7px}.security-card p{font-size:10px;color:#aebbc9}
+
+    .about{background:var(--cream2)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .about-art{min-height:380px;border-radius:28px;background:linear-gradient(135deg,#0a2342,#12395f);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .about-art:before{content:"WORLD";position:absolute;font-size:110px;font-weight:800;color:rgba(228,189,104,.08);left:30px;bottom:20px}
+    .about-art .tower{position:absolute;bottom:0;width:14px;background:linear-gradient(#e4bd68,#7d5d36);border-radius:7px 7px 0 0}
+    .tower:nth-child(1){height:190px;left:18%}.tower:nth-child(2){height:250px;left:35%;width:22px}.tower:nth-child(3){height:145px;left:55%;width:18px}.tower:nth-child(4){height:220px;left:74%;width:12px}
+    .about-copy h2{font-size:34px;color:var(--navy);margin-bottom:15px}.about-copy p{color:var(--muted);font-size:14px;margin-bottom:18px}.ticks{display:grid;gap:10px}.tick{font-size:13px;font-weight:700;color:var(--brown)}.tick::before{content:"✓";color:var(--gold);margin-left:8px}
+
+    .contact{background:var(--cream);padding-bottom:65px}.contact-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.contact-item{text-align:center;padding:20px 8px;border-left:1px solid var(--line)}.contact-item:last-child{border:0}
+    .contact-icon{font-size:25px;color:var(--gold);margin-bottom:5px}.contact-item h3{font-size:13px;color:var(--navy)}.contact-item p{font-size:10px;color:var(--muted);direction:ltr}
+    footer{background:#04152a;color:#dce4ed;padding:50px 0 18px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:35px}.footer-col h3{font-size:14px;color:#fff;margin-bottom:15px}.footer-col p,.footer-col a{font-size:11px;color:#9eacbb;display:block;margin:7px 0}.newsletter{display:flex;background:rgba(255,255,255,.06);padding:5px;border-radius:12px;margin-top:12px}.newsletter input{min-width:0;flex:1;background:none;border:0;outline:0;color:#fff;padding:9px}.copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:35px;padding-top:16px;text-align:center;color:#718196;font-size:10px}
+
+    .modal{position:fixed;inset:0;background:rgba(2,12,25,.72);display:none;place-items:center;z-index:100;padding:20px}.modal.show{display:grid}.modal-card{background:#fff;border-radius:24px;width:min(620px,100%);padding:30px;position:relative}.close{position:absolute;left:18px;top:15px;border:0;background:none;font-size:25px;cursor:pointer;color:var(--brown)}.modal-card h2{color:var(--navy);margin-bottom:8px}.modal-card p{color:var(--muted);font-size:13px}.modal-list{margin:20px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}.modal-list div{background:#faf4e9;padding:12px;border-radius:12px;font-size:12px}
+
+    @media(max-width:900px){
+      .navlinks{display:none}.hamb{display:block}.navlinks.open{display:flex;position:absolute;top:82px;right:0;left:0;background:var(--navy);padding:20px;flex-direction:column;gap:16px}
+      .hero{min-height:680px}.landmarks{height:180px}.landmark i{font-size:55px!important}.landmark span{display:none}
+      .exam-grid{grid-template-columns:repeat(2,1fr)}.process-wrap,.about-grid{grid-template-columns:1fr}.security-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:repeat(3,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      nav{height:70px}.brand strong{font-size:13px}.logo{width:42px;height:42px}.hero{min-height:640px}.hero p{font-size:14px}.landmarks{height:130px}
+      .landmark:nth-child(even){display:none}.exam-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.security-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}
+      section{padding:65px 0}.section-head h2{font-size:27px}.process-box{padding:25px}.gallery{min-height:350px}.photo{min-height:165px}.modal-list{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">
+        <div class="logo">◈</div>
+        <div><strong>نام مجموعه شما</strong><small>مرکز بین‌المللی آزمون‌های زبان</small></div>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="#home">خانه</a><a href="#exams">آزمون‌های زبان</a><a href="#process">نحوه برگزاری</a><a href="#security">امنیت آزمون</a><a href="#about">درباره ما</a><a href="#contact">ارتباط با ما</a>
+      </div>
+      <a class="btn btn-gold" href="#contact">درخواست آزمون ◧</a>
+      <button class="hamb" id="hamb">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="world"></div>
+  <div class="hero-content container">
+    <div class="eyebrow">مرکز حرفه‌ای آزمون‌های زبان</div>
+    <h1>زبان شما، آینده شما<br>مسیر جهانی شما</h1>
+    <p>آزمون‌های زبان بین‌المللی با رویکردی حرفه‌ای برای تحصیل، مهاجرت، کار و ساختن آینده‌ای در سطح جهان.</p>
+    <div class="actions">
+      <a class="btn btn-dark" href="#exams">مشاهده آزمون‌های زبان ←</a>
+      <a class="btn btn-outline" href="#process">نحوه برگزاری آزمون ▷</a>
+    </div>
+  </div>
+  <div class="landmarks" aria-hidden="true">
+    <div class="landmark"><i>🏙</i><span>Empire State</span></div>
+    <div class="landmark"><i>🗽</i><span>New York</span></div>
+    <div class="landmark"><i>🕰</i><span>Big Ben</span></div>
+    <div class="landmark"><i>◢</i><span>Pisa</span></div>
+    <div class="landmark"><i>🗼</i><span>Paris</span></div>
+    <div class="landmark"><i>♜</i><span>Milad Tower</span></div>
+  </div>
+</section>
+
+<section class="exams" id="exams">
+  <div class="container">
+    <div class="section-head"><div class="line"></div><h2>آزمون‌های بین‌المللی زبان</h2><p>از بین آزمون‌های پرکاربرد، آزمون مناسب هدف خود را انتخاب کنید.</p></div>
+    <div class="exam-grid">
+      <article class="exam-card"><div class="exam-logo">IELTS <small>ENGLISH</small></div><h3>IELTS</h3><p>آزمون بین‌المللی زبان انگلیسی برای اهداف تحصیلی، مهاجرتی و حرفه‌ای.</p><div class="card-foot"><span class="mini">۴ مهارت اصلی</span><button class="btn btn-outline more" data-exam="IELTS">مشاهده بیشتر ←</button></div></article>
+      <article class="exam-card"><div class="exam-logo">toefl. <small>ETS</small></div><h3>TOEFL iBT</h3><p>آزمون زبان انگلیسی آکادمیک با تمرکز بر مهارت‌های مورد نیاز محیط دانشگاهی.</p><div class="card-foot"><span class="mini">Academic</span><button class="btn btn-outline more" data-exam="TOEFL iBT">مشاهده بیشتر ←</button></div></article>
+      <article class="exam-card"><div class="exam-logo">PTE <small>Pearson</small></div><h3>PTE Academic</h3><p>آزمون کامپیوتری زبان انگلیسی با ارزیابی مهارت‌های زبانی در قالب دیجیتال.</p><div class="card-foot"><span class="mini">Computer-based</span><button class="btn btn-outline more" data-exam="PTE Academic">مشاهده بیشتر ←</button></div></article>
+      <article class="exam-card"><div class="exam-logo">duolingo <small>ENGLISH TEST</small></div><h3>Duolingo English Test</h3><p>آزمون آنلاین زبان انگلیسی با ساختاری سریع و مناسب برای برخی اهداف پذیرش.</p><div class="card-foot"><span class="mini">Online</span><button class="btn btn-outline more" data-exam="Duolingo English Test">مشاهده بیشتر ←</button></div></article>
+      <article class="exam-card"><div class="exam-logo">CAMBRIDGE <small>ENGLISH</small></div><h3>Cambridge English</h3><p>مجموعه آزمون‌های معتبر زبان انگلیسی برای سنجش سطح عمومی و آکادمیک.</p><div class="card-foot"><span class="mini">International</span><button class="btn btn-outline more" data-exam="Cambridge English">مشاهده بیشتر ←</button></div></article>
+      <article class="exam-card"><div class="exam-logo">◎ <small>LANGUAGES</small></div><h3>سایر آزمون‌ها</h3><p>آزمون‌های زبان آلمانی، فرانسوی، ترکی و سایر زبان‌ها را در این بخش اضافه کنید.</p><div class="card-foot"><span class="mini">قابل توسعه</span><button class="btn btn-outline more" data-exam="سایر آزمون‌ها">مشاهده بیشتر ←</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container process-wrap">
+    <div class="gallery" aria-label="تصاویر داوطلبان">
+      <div class="photo"></div><div class="photo"></div><div class="photo"></div><div class="photo"></div><div class="photo"></div><div class="photo"></div>
+    </div>
+    <div class="process-box">
+      <h2>چگونه آزمون می‌گیریم؟</h2>
+      <p>این متن کاملاً قابل ویرایش است؛ مراحل واقعی برگزاری آزمون مجموعه خودتان را اینجا وارد کنید.</p>
+      <div class="steps">
+        <div class="step"><b>۰۱</b><span>ثبت‌نام</span><p>ثبت درخواست و اطلاعات داوطلب</p></div>
+        <div class="step"><b>۰۲</b><span>تأیید هویت</span><p>بررسی اطلاعات هویتی</p></div>
+        <div class="step"><b>۰۳</b><span>برگزاری آزمون</span><p>اجرای آزمون طبق فرایند شما</p></div>
+        <div class="step"><b>۰۴</b><span>نظارت و امنیت</span><p>کنترل فرایند آزمون</p></div>
+        <div class="step"><b>۰۵</b><span>ارزیابی</span><p>بررسی و پردازش نتایج</p></div>
+        <div class="step"><b>۰۶</b><span>اعلام نتایج</span><p>ارائه نتیجه به داوطلب</p></div>
+      </div>
+      <a class="btn btn-gold" style="margin-top:25px;align-self:center" href="#security">توضیحات کامل فرایند برگزاری ←</a>
+    </div>
+  </div>
+</section>
+
+<section class="security" id="security">
+  <div class="container">
+    <div class="section-head"><div class="line"></div><h2>امنیت شما، اولویت ماست</h2><p>متن این قسمت را با سیاست‌های واقعی مجموعه خود جایگزین کنید و فقط مواردی را نمایش دهید که واقعاً اجرا می‌شوند.</p></div>
+    <div class="security-grid">
+      <div class="security-card"><div class="shield">♙</div><h3>تأیید هویت دقیق</h3><p>فرایند احراز هویت واقعی مجموعه را اینجا توضیح دهید.</p></div>
+      <div class="security-card"><div class="shield">▣</div><h3>محیط آزمون امن</h3><p>شرایط و استانداردهای واقعی محیط آزمون را معرفی کنید.</p></div>
+      <div class="security-card"><div class="shield">◉</div><h3>نظارت هوشمند</h3><p>فقط ابزارها و روش‌هایی را بنویسید که واقعاً استفاده می‌کنید.</p></div>
+      <div class="security-card"><div class="shield">▤</div><h3>حفاظت اطلاعات</h3><p>سیاست حفظ و پردازش اطلاعات داوطلبان را توضیح دهید.</p></div>
+      <div class="security-card"><div class="shield">✓</div><h3>یکپارچگی نتایج</h3><p>نحوه بررسی و ثبت نتایج را شفاف و دقیق توضیح دهید.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-art" aria-hidden="true"><div class="tower"></div><div class="tower"></div><div class="tower"></div><div class="tower"></div></div>
+    <div class="about-copy">
+      <div class="eyebrow">درباره مجموعه</div>
+      <h2>یک قدم نزدیک‌تر به آینده‌ای جهانی</h2>
+      <p>این بخش برای معرفی مجموعه، سابقه، مأموریت، ارزش‌ها و خدمات شما طراحی شده است. متن را با داستان واقعی برند خودتان جایگزین کنید.</p>
+      <div class="ticks"><div class="tick">تمرکز بر تجربه حرفه‌ای داوطلب</div><div class="tick">فرایند شفاف و قابل پیگیری</div><div class="tick">طراحی شده برای مخاطب بین‌المللی</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head"><div class="line"></div><h2>ارتباط با ما</h2><p>اطلاعات تماس واقعی مجموعه را جایگزین مقادیر نمونه کنید.</p></div>
+    <div class="contact-grid">
+      <div class="contact-item"><div class="contact-icon">☎</div><h3>تلفن تماس</h3><p>021-12345678</p></div>
+      <div class="contact-item"><div class="contact-icon">◉</div><h3>واتساپ</h3><p>0912-123-4567</p></div>
+      <div class="contact-item"><div class="contact-icon">◎</div><h3>اینستاگرام</h3><p>@your_instagram</p></div>
+      <div class="contact-item"><div class="contact-icon">➤</div><h3>تلگرام</h3><p>@your_telegram</p></div>
+      <div class="contact-item"><div class="contact-icon">✉</div><h3>ایمیل</h3><p>info@example.com</p></div>
+      <div class="contact-item"><div class="contact-icon">⌖</div><h3>آدرس</h3><p>تهران، خیابان نمونه</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><div class="brand"><div class="logo">◈</div><div><strong>نام مجموعه شما</strong><small>مرکز بین‌المللی آزمون‌های زبان</small></div></div><p style="margin-top:15px">مسیر حرفه‌ای شما برای ورود به فرصت‌های آموزشی و شغلی بین‌المللی.</p></div>
+      <div class="footer-col"><h3>لینک‌های سریع</h3><a href="#home">خانه</a><a href="#exams">آزمون‌های زبان</a><a href="#process">نحوه برگزاری</a><a href="#about">درباره ما</a></div>
+      <div class="footer-col"><h3>آزمون‌ها</h3><a href="#exams">IELTS</a><a href="#exams">TOEFL</a><a href="#exams">PTE</a><a href="#exams">Cambridge</a></div>
+      <div class="footer-col"><h3>عضویت در خبرنامه</h3><p>برای دریافت اخبار و اطلاعیه‌ها ایمیل خود را وارد کنید.</p><form class="newsletter" id="newsletter"><input type="email" placeholder="ایمیل شما" required><button class="btn btn-gold" type="submit">عضویت</button></form></div>
+    </div>
+    <div class="copyright">© ۲۰۲۶ نام مجموعه شما — تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="close" id="close">×</button>
+    <div class="eyebrow">اطلاعات آزمون</div>
+    <h2 id="modalTitle">IELTS</h2>
+    <p id="modalText">توضیحات این آزمون را در این پنجره قرار دهید.</p>
+    <div class="modal-list"><div>مهارت‌ها: Listening / Reading / Writing / Speaking</div><div>مخاطب: تحصیلی، کاری یا مهاجرتی</div><div>مدت آزمون: طبق آخرین قوانین رسمی</div><div>نمره‌دهی: طبق سیستم رسمی برگزارکننده</div></div>
+    <a class="btn btn-dark" href="#contact" onclick="closeModal()">درخواست اطلاعات بیشتر ←</a>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('navlinks');
+  document.getElementById('hamb').addEventListener('click',()=>nav.classList.toggle('open'));
+  document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+  const modal=document.getElementById('modal'), title=document.getElementById('modalTitle'), text=document.getElementById('modalText');
+  const descriptions={
+    'IELTS':'آزمون بین‌المللی زبان انگلیسی برای سنجش توانایی ارتباط و استفاده از زبان در موقعیت‌های واقعی و آکادمیک.',
+    'TOEFL iBT':'آزمون زبان انگلیسی آکادمیک که توانایی داوطلب را در مهارت‌های اصلی زبان ارزیابی می‌کند.',
+    'PTE Academic':'آزمون کامپیوتری زبان انگلیسی که برای برخی اهداف تحصیلی و مهاجرتی مورد استفاده قرار می‌گیرد.',
+    'Duolingo English Test':'آزمون آنلاین زبان انگلیسی با فرایند دیجیتال و ساختار تطبیقی.',
+    'Cambridge English':'مجموعه‌ای از آزمون‌های زبان انگلیسی با سطوح و اهداف مختلف.',
+    'سایر آزمون‌ها':'این قسمت را با آزمون‌های زبان آلمانی، فرانسوی، ترکی یا سایر خدمات خود تکمیل کنید.'
+  };
+  document.querySelectorAll('[data-exam]').forEach(btn=>btn.addEventListener('click',()=>{
+    const name=btn.dataset.exam; title.textContent=name; text.textContent=descriptions[name]||'اطلاعات این آزمون را از منبع رسمی آن دریافت و در سایت وارد کنید.'; modal.classList.add('show');
+  }));
+  function closeModal(){modal.classList.remove('show')}
+  document.getElementById('close').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+  document.getElementById('newsletter').addEventListener('submit',e=>{e.preventDefault();alert('ایمیل شما ثبت شد. این بخش را بعداً به سرویس خبرنامه واقعی متصل کنید.');});
+</script>
+</body>
+</html>
