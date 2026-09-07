@@ -1,6 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,859 +11,1641 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
+/* =========================
+   VARIABLES
+========================= */
+
 :root{
+
     --navy:#081c35;
     --navy2:#102d4d;
+
     --cream:#f8f0e2;
     --cream2:#fffaf2;
+
     --brown:#684a32;
     --brown2:#8b6848;
+
     --gold:#c99b4d;
     --gold2:#e1bd76;
+
     --text:#293442;
     --muted:#766d62;
+
     --border:#dfcfb8;
+
     --white:#ffffff;
-    --shadow:0 15px 45px rgba(65,43,24,.08);
+
+    --shadow:
+    0 15px 45px rgba(65,43,24,.08);
+
 }
+
+
+/* =========================
+   RESET
+========================= */
 
 *{
+
     margin:0;
     padding:0;
+
     box-sizing:border-box;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
-    font-family:"Vazirmatn",Tahoma,sans-serif;
-    background:var(--cream2);
-    color:var(--text);
-    line-height:2;
+
+    font-family:
+    "Vazirmatn",
+    Tahoma,
+    sans-serif;
+
+    background:
+    var(--cream2);
+
+    color:
+    var(--text);
+
+    line-height:
+    2;
+
 }
+
 
 a{
+
     text-decoration:none;
+
     color:inherit;
+
 }
+
 
 .container{
-    width:min(1160px,92%);
-    margin:auto;
+
+    width:
+    min(1160px,92%);
+
+    margin:
+    auto;
+
 }
 
-/* ================= HEADER ================= */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
-    position:sticky;
+
+    position:
+    sticky;
+
     top:0;
+
     z-index:1000;
-    background:rgba(8,28,53,.97);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+
+    background:
+    rgba(8,28,53,.97);
+
+    backdrop-filter:
+    blur(15px);
+
+    border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+
 }
+
 
 .nav{
-    min-height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
+
+    min-height:
+    78px;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    space-between;
+
+    gap:
+    25px;
+
 }
+
+
+/* LOGO */
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:white;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    gap:
+    12px;
+
+    color:
+    white;
+
 }
+
 
 .logo-icon{
-    width:44px;
-    height:44px;
-    border:1px solid var(--gold2);
-    border-radius:13px;
-    position:relative;
-    display:grid;
-    place-items:center;
+
+    width:
+    44px;
+
+    height:
+    44px;
+
+    border:
+    1px solid
+    var(--gold2);
+
+    border-radius:
+    13px;
+
+    position:
+    relative;
+
+    display:
+    grid;
+
+    place-items:
+    center;
+
 }
+
 
 .logo-icon::before{
+
     content:"";
-    width:18px;
-    height:18px;
-    border:2px solid var(--gold2);
-    transform:rotate(45deg);
-    border-radius:4px;
+
+    width:
+    18px;
+
+    height:
+    18px;
+
+    border:
+    2px solid
+    var(--gold2);
+
+    transform:
+    rotate(45deg);
+
+    border-radius:
+    4px;
+
 }
+
 
 .logo-text strong{
+
     display:block;
-    font-size:16px;
+
+    font-size:
+    16px;
+
 }
+
 
 .logo-text span{
+
     display:block;
-    color:#aebdcd;
-    font-size:9px;
+
+    color:
+    #aebdcd;
+
+    font-size:
+    9px;
+
 }
+
+
+/* NAVIGATION */
 
 .nav-links{
-    display:flex;
-    gap:25px;
-    color:#d9e1e9;
-    font-size:12px;
+
+    display:
+    flex;
+
+    gap:
+    25px;
+
+    color:
+    #d9e1e9;
+
+    font-size:
+    12px;
+
 }
+
 
 .nav-links a{
-    transition:.2s;
+
+    transition:
+    .2s;
+
 }
+
 
 .nav-links a:hover{
-    color:var(--gold2);
+
+    color:
+    var(--gold2);
+
 }
+
 
 .nav-button{
-    background:var(--gold2);
-    color:var(--navy);
-    padding:9px 17px;
-    border-radius:10px;
-    font-size:11px;
-    font-weight:800;
+
+    background:
+    var(--gold2);
+
+    color:
+    var(--navy);
+
+    padding:
+    9px 17px;
+
+    border-radius:
+    10px;
+
+    font-size:
+    11px;
+
+    font-weight:
+    800;
+
 }
 
-/* ================= HERO ================= */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    min-height:690px;
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
+
+    min-height:
+    690px;
+
+    position:
+    relative;
+
+    overflow:
+    hidden;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
     background:
-        linear-gradient(
-            180deg,
-            #faf2e5 0%,
-            #f3e6d3 100%
-        );
+
+    linear-gradient(
+        180deg,
+        #faf2e5 0%,
+        #f3e6d3 100%
+    );
+
 }
+
 
 .hero::before{
+
     content:"";
-    position:absolute;
+
+    position:
+    absolute;
+
     inset:0;
+
     background-image:
-        radial-gradient(
-            rgba(201,155,77,.18) 1px,
-            transparent 1px
-        );
-    background-size:20px 20px;
+
+    radial-gradient(
+        rgba(201,155,77,.18)
+        1px,
+        transparent 1px
+    );
+
+    background-size:
+    20px 20px;
+
 }
+
 
 .hero-content{
-    position:relative;
-    z-index:5;
-    width:min(850px,92%);
-    margin:auto;
-    text-align:center;
-    padding-bottom:190px;
+
+    position:
+    relative;
+
+    z-index:
+    5;
+
+    width:
+    min(850px,92%);
+
+    margin:
+    auto;
+
+    text-align:
+    center;
+
+    padding-bottom:
+    190px;
+
 }
+
 
 .eyebrow{
-    color:var(--gold);
-    font-size:12px;
-    font-weight:800;
+
+    color:
+    var(--gold);
+
+    font-size:
+    12px;
+
+    font-weight:
+    800;
+
 }
+
 
 .hero h1{
-    color:var(--navy);
-    font-size:clamp(38px,6vw,68px);
-    line-height:1.25;
-    margin:12px 0;
+
+    color:
+    var(--navy);
+
+    font-size:
+    clamp(38px,6vw,68px);
+
+    line-height:
+    1.25;
+
+    margin:
+    12px 0;
+
 }
+
 
 .hero-description{
-    color:var(--muted);
-    font-size:14px;
-    max-width:650px;
-    margin:auto;
+
+    color:
+    var(--muted);
+
+    font-size:
+    14px;
+
+    max-width:
+    650px;
+
+    margin:
+    auto;
+
 }
+
 
 .hero-buttons{
-    margin-top:25px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
+
+    margin-top:
+    25px;
+
+    display:
+    flex;
+
+    justify-content:
+    center;
+
+    gap:
+    12px;
+
+    flex-wrap:
+    wrap;
+
 }
+
 
 .btn{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:11px;
-    padding:11px 21px;
-    font-family:inherit;
-    font-size:12px;
-    font-weight:800;
-    transition:.2s;
+
+    display:
+    inline-flex;
+
+    justify-content:
+    center;
+
+    align-items:
+    center;
+
+    border-radius:
+    11px;
+
+    padding:
+    11px 21px;
+
+    font-family:
+    inherit;
+
+    font-size:
+    12px;
+
+    font-weight:
+    800;
+
+    transition:
+    .2s;
+
 }
+
 
 .btn:hover{
-    transform:translateY(-2px);
+
+    transform:
+    translateY(-2px);
+
 }
+
 
 .btn-primary{
-    background:var(--navy);
-    color:white;
+
+    background:
+    var(--navy);
+
+    color:
+    white;
+
 }
+
 
 .btn-secondary{
-    border:1px solid var(--brown);
-    color:var(--brown);
-    background:rgba(255,255,255,.3);
+
+    border:
+    1px solid
+    var(--brown);
+
+    color:
+    var(--brown);
+
+    background:
+    rgba(255,255,255,.3);
+
 }
 
-/* ================= LANDMARKS ================= */
+
+/* =========================
+   CITY LANDMARKS
+========================= */
 
 .landmarks{
-    position:absolute;
+
+    position:
+    absolute;
+
     left:0;
     right:0;
     bottom:0;
-    height:255px;
 
-    display:flex;
-    justify-content:space-around;
-    align-items:flex-end;
+    height:
+    255px;
 
-    padding:0 3%;
+    display:
+    flex;
 
-    z-index:3;
+    justify-content:
+    space-around;
+
+    align-items:
+    flex-end;
+
+    padding:
+    0 3%;
+
+    z-index:
+    3;
+
 }
+
 
 .landmark{
-    width:15%;
-    height:225px;
-    position:relative;
 
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
+    width:
+    15%;
+
+    height:
+    225px;
+
+    position:
+    relative;
+
+    display:
+    flex;
+
+    align-items:
+    flex-end;
+
+    justify-content:
+    center;
+
 }
+
 
 .landmark svg{
-    width:100%;
-    max-width:145px;
-    height:100%;
+
+    width:
+    100%;
+
+    max-width:
+    145px;
+
+    height:
+    100%;
+
 }
+
 
 .landmark svg *{
-    fill:none;
-    stroke:var(--brown);
-    stroke-width:2.5;
-    stroke-linecap:round;
-    stroke-linejoin:round;
+
+    fill:
+    none;
+
+    stroke:
+    var(--brown);
+
+    stroke-width:
+    2.5;
+
+    stroke-linecap:
+    round;
+
+    stroke-linejoin:
+    round;
+
 }
+
 
 .landmark-name{
-    position:absolute;
-    bottom:0;
-    font-size:8px;
-    letter-spacing:1px;
-    color:var(--brown2);
+
+    position:
+    absolute;
+
+    bottom:
+    0;
+
+    font-size:
+    8px;
+
+    letter-spacing:
+    1px;
+
+    color:
+    var(--brown2);
+
 }
 
-/* ================= SECTIONS ================= */
+
+/* =========================
+   SECTIONS
+========================= */
 
 section{
-    padding:85px 0;
+
+    padding:
+    85px 0;
+
 }
+
 
 .section-header{
-    text-align:center;
-    max-width:750px;
-    margin:0 auto 42px;
+
+    text-align:
+    center;
+
+    max-width:
+    750px;
+
+    margin:
+    0 auto 42px;
+
 }
+
 
 .section-line{
-    width:60px;
-    height:3px;
-    border-radius:5px;
-    background:var(--gold);
-    margin:0 auto 12px;
+
+    width:
+    60px;
+
+    height:
+    3px;
+
+    border-radius:
+    5px;
+
+    background:
+    var(--gold);
+
+    margin:
+    0 auto 12px;
+
 }
+
 
 .section-header h2{
-    font-size:31px;
-    color:var(--navy);
-    margin-bottom:7px;
+
+    font-size:
+    31px;
+
+    color:
+    var(--navy);
+
+    margin-bottom:
+    7px;
+
 }
+
 
 .section-header p{
-    font-size:13px;
-    color:var(--muted);
+
+    font-size:
+    13px;
+
+    color:
+    var(--muted);
+
 }
 
-/* ================= EXAMS ================= */
+
+/* =========================
+   EXAMS
+========================= */
 
 .exams{
-    background:var(--cream2);
+
+    background:
+    var(--cream2);
+
 }
+
 
 .exam-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+
+    display:
+    grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:
+    18px;
+
 }
+
 
 .exam-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:21px;
-    padding:23px;
-    box-shadow:var(--shadow);
-    transition:.25s;
+
+    background:
+    white;
+
+    border:
+    1px solid
+    var(--border);
+
+    border-radius:
+    21px;
+
+    padding:
+    23px;
+
+    box-shadow:
+    var(--shadow);
+
+    transition:
+    .25s;
+
 }
+
 
 .exam-card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(201,155,77,.6);
+
+    transform:
+    translateY(-6px);
+
+    border-color:
+    rgba(201,155,77,.6);
+
 }
+
 
 .exam-logo{
-    height:70px;
-    border-radius:15px;
-    background:var(--cream);
-    display:flex;
-    align-items:center;
-    justify-content:center;
 
-    color:var(--navy);
-    font-weight:800;
-    font-size:22px;
-    letter-spacing:.5px;
+    height:
+    70px;
+
+    border-radius:
+    15px;
+
+    background:
+    var(--cream);
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    color:
+    var(--navy);
+
+    font-weight:
+    800;
+
+    font-size:
+    22px;
+
 }
+
 
 .exam-card h3{
-    color:var(--navy);
-    font-size:18px;
-    margin-top:15px;
+
+    color:
+    var(--navy);
+
+    font-size:
+    18px;
+
+    margin-top:
+    15px;
+
 }
+
 
 .exam-card p{
-    font-size:12px;
-    color:var(--muted);
-    min-height:62px;
+
+    font-size:
+    12px;
+
+    color:
+    var(--muted);
+
+    min-height:
+    62px;
+
 }
+
 
 .exam-bottom{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    space-between;
+
+    gap:
+    10px;
+
 }
+
 
 .language{
-    font-size:9px;
-    color:var(--brown);
-    background:var(--cream);
-    padding:4px 9px;
-    border-radius:20px;
+
+    font-size:
+    9px;
+
+    color:
+    var(--brown);
+
+    background:
+    var(--cream);
+
+    padding:
+    4px 9px;
+
+    border-radius:
+    20px;
+
 }
+
 
 .more-button{
-    background:var(--navy);
-    color:white;
-    padding:8px 13px;
-    border-radius:9px;
-    font-size:10px;
-    font-weight:800;
+
+    background:
+    var(--navy);
+
+    color:
+    white;
+
+    padding:
+    8px 13px;
+
+    border-radius:
+    9px;
+
+    font-size:
+    10px;
+
+    font-weight:
+    800;
+
 }
 
-/* ================= PROCESS ================= */
+
+/* =========================
+   PROCESS
+========================= */
 
 .process{
-    background:#f3e6d2;
+
+    background:
+    #f3e6d2;
+
 }
+
 
 .process-layout{
-    display:grid;
-    grid-template-columns:1fr 1.25fr;
-    gap:30px;
+
+    display:
+    grid;
+
+    grid-template-columns:
+    1fr 1.25fr;
+
+    gap:
+    30px;
+
 }
+
+
+/* CANDIDATE IMAGES */
 
 .candidate-images{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+
+    display:
+    grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:
+    12px;
+
 }
+
 
 .candidate{
-    min-height:205px;
-    border-radius:18px;
-    position:relative;
-    overflow:hidden;
+
+    min-height:
+    205px;
+
+    border-radius:
+    18px;
+
+    position:
+    relative;
+
+    overflow:
+    hidden;
 
     background:
-        linear-gradient(
-            135deg,
-            #d2bea0,
-            #f8eedf,
-            #a88c6c
-        );
+    #e8dccb;
+
 }
 
-.candidate:nth-child(2){
-    background:linear-gradient(135deg,#c6b297,#efe2d0,#9b8062);
+
+.candidate img{
+
+    width:
+    100%;
+
+    height:
+    100%;
+
+    min-height:
+    205px;
+
+    display:
+    block;
+
+    object-fit:
+    cover;
+
+    transition:
+    transform .35s ease;
+
 }
 
-.candidate:nth-child(3){
-    background:linear-gradient(135deg,#dfccb1,#f4e7d4,#a88a68);
+
+.candidate:hover img{
+
+    transform:
+    scale(1.04);
+
 }
 
-.candidate:nth-child(4){
-    background:linear-gradient(135deg,#bfa98b,#eadbc7,#907254);
-}
 
-.candidate:nth-child(5){
-    background:linear-gradient(135deg,#d0b99a,#f4e9da,#a38361);
-}
-
-.candidate:nth-child(6){
-    background:linear-gradient(135deg,#c2b097,#e8dccb,#8f7658);
-}
-
-.candidate::after{
-    content:"تصویر داوطلب";
-    position:absolute;
-    inset:0;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:rgba(104,74,50,.4);
-    font-size:11px;
-}
+/* PROCESS BOX */
 
 .process-box{
-    background:var(--navy);
-    color:white;
-    padding:32px;
-    border-radius:25px;
-    box-shadow:var(--shadow);
+
+    background:
+    var(--navy);
+
+    color:
+    white;
+
+    padding:
+    32px;
+
+    border-radius:
+    25px;
+
+    box-shadow:
+    var(--shadow);
+
 }
+
 
 .process-box h2{
-    font-size:27px;
-    margin-bottom:8px;
+
+    font-size:
+    27px;
+
+    margin-bottom:
+    8px;
+
 }
+
 
 .process-intro{
-    color:#c5d0dc;
-    font-size:12px;
+
+    color:
+    #c5d0dc;
+
+    font-size:
+    12px;
+
 }
+
 
 .slogan{
-    border-right:3px solid var(--gold2);
-    padding-right:14px;
-    margin:20px 0;
 
-    color:#f0f4f7;
-    font-size:13px;
+    border-right:
+    3px solid
+    var(--gold2);
+
+    padding-right:
+    14px;
+
+    margin:
+    20px 0;
+
+    color:
+    #f0f4f7;
+
+    font-size:
+    13px;
+
 }
+
 
 .features{
-    display:grid;
-    gap:9px;
+
+    display:
+    grid;
+
+    gap:
+    9px;
+
 }
+
 
 .feature{
-    display:flex;
-    gap:10px;
 
-    padding:11px 12px;
+    display:
+    flex;
 
-    border:1px solid rgba(227,189,112,.15);
-    background:rgba(255,255,255,.025);
-    border-radius:13px;
+    gap:
+    10px;
+
+    padding:
+    11px 12px;
+
+    border:
+    1px solid
+    rgba(227,189,112,.15);
+
+    background:
+    rgba(255,255,255,.025);
+
+    border-radius:
+    13px;
+
 }
+
 
 .check{
-    color:var(--gold2);
-    font-size:18px;
-    line-height:1.5;
+
+    color:
+    var(--gold2);
+
+    font-size:
+    18px;
+
+    line-height:
+    1.5;
+
 }
+
 
 .feature strong{
-    display:block;
-    color:white;
-    font-size:12px;
+
+    display:
+    block;
+
+    color:
+    white;
+
+    font-size:
+    12px;
+
 }
+
 
 .feature-text{
-    color:#d5dde5;
-    font-size:10.5px;
+
+    color:
+    #d5dde5;
+
+    font-size:
+    10.5px;
+
 }
 
-/* ================= SECURITY ================= */
+
+/* =========================
+   SECURITY
+========================= */
 
 .security{
-    background:var(--navy);
-    color:white;
+
+    background:
+    var(--navy);
+
+    color:
+    white;
+
 }
+
 
 .security .section-header h2{
-    color:white;
+
+    color:
+    white;
+
 }
+
 
 .security .section-header p{
-    color:#aebdcd;
+
+    color:
+    #aebdcd;
+
 }
+
 
 .security-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:13px;
+
+    display:
+    grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:
+    13px;
+
 }
+
 
 .security-card{
-    min-height:175px;
-    text-align:center;
 
-    padding:20px 13px;
+    min-height:
+    175px;
 
-    border:1px solid rgba(227,189,112,.18);
-    background:rgba(255,255,255,.025);
+    text-align:
+    center;
 
-    border-radius:18px;
+    padding:
+    20px 13px;
+
+    border:
+    1px solid
+    rgba(227,189,112,.18);
+
+    background:
+    rgba(255,255,255,.025);
+
+    border-radius:
+    18px;
+
 }
+
 
 .security-icon{
-    width:44px;
-    height:44px;
 
-    display:grid;
-    place-items:center;
+    width:
+    44px;
 
-    margin:0 auto 10px;
+    height:
+    44px;
 
-    border:1px solid rgba(227,189,112,.5);
-    border-radius:50%;
+    display:
+    grid;
 
-    color:var(--gold2);
-    font-size:18px;
+    place-items:
+    center;
+
+    margin:
+    0 auto 10px;
+
+    border:
+    1px solid
+    rgba(227,189,112,.5);
+
+    border-radius:
+    50%;
+
+    color:
+    var(--gold2);
+
+    font-size:
+    18px;
+
 }
+
 
 .security-card h3{
-    font-size:13px;
-    margin-bottom:5px;
+
+    font-size:
+    13px;
+
+    margin-bottom:
+    5px;
+
 }
+
 
 .security-card p{
-    font-size:9px;
-    color:#aebdcd;
+
+    font-size:
+    9px;
+
+    color:
+    #aebdcd;
+
 }
 
-/* ================= ABOUT ================= */
 
-.about{
-    background:var(--cream2);
-}
-
-.about-layout{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-    align-items:center;
-}
-
-.about-art{
-    height:370px;
-    border-radius:27px;
-    position:relative;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            #071a31,
-            #123b61
-        );
-}
-
-.about-art::after{
-    content:"mohajeran 2020";
-
-    position:absolute;
-    bottom:22px;
-    left:0;
-    right:0;
-
-    text-align:center;
-
-    color:rgba(227,189,112,.22);
-
-    font-size:25px;
-    font-weight:800;
-}
-
-.about-tower{
-    position:absolute;
-    bottom:0;
-
-    background:
-        linear-gradient(
-            #e3bd70,
-            #735431
-        );
-
-    border-radius:6px 6px 0 0;
-}
-
-.about-tower:nth-child(1){
-    left:20%;
-    width:12px;
-    height:170px;
-}
-
-.about-tower:nth-child(2){
-    left:38%;
-    width:20px;
-    height:245px;
-}
-
-.about-tower:nth-child(3){
-    left:57%;
-    width:15px;
-    height:135px;
-}
-
-.about-tower:nth-child(4){
-    left:75%;
-    width:11px;
-    height:210px;
-}
-
-.about-copy h2{
-    font-size:34px;
-    color:var(--navy);
-    margin:8px 0 12px;
-}
-
-.about-copy p{
-    color:var(--muted);
-    font-size:13px;
-}
-
-/* ================= CONTACT ================= */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-    background:var(--cream);
+
+    background:
+    var(--cream);
+
 }
+
 
 .contact-grid{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
 
-    border:1px solid var(--border);
-    border-radius:20px;
+    display:
+    grid;
 
-    background:rgba(255,255,255,.5);
-    overflow:hidden;
+    grid-template-columns:
+    repeat(5,1fr);
+
+    border:
+    1px solid
+    var(--border);
+
+    border-radius:
+    20px;
+
+    background:
+    rgba(255,255,255,.5);
+
+    overflow:
+    hidden;
+
 }
+
 
 .contact-item{
-    text-align:center;
-    padding:20px 7px;
-    border-left:1px solid var(--border);
+
+    text-align:
+    center;
+
+    padding:
+    22px 7px;
+
+    border-left:
+    1px solid
+    var(--border);
+
 }
+
 
 .contact-item:last-child{
-    border-left:0;
+
+    border-left:
+    0;
+
 }
+
 
 .contact-icon{
-    font-size:22px;
-    color:var(--gold);
+
+    font-size:
+    22px;
+
+    color:
+    var(--gold);
+
 }
+
 
 .contact-item h3{
-    color:var(--navy);
-    font-size:12px;
-    margin:4px;
+
+    color:
+    var(--navy);
+
+    font-size:
+    12px;
+
+    margin:
+    4px;
+
 }
+
 
 .contact-item p{
-    color:var(--muted);
-    font-size:9px;
+
+    color:
+    var(--muted);
+
+    font-size:
+    9px;
+
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#041326;
-    color:white;
-    padding:48px 0 18px;
+
+    background:
+    #041326;
+
+    color:
+    white;
+
+    padding:
+    48px 0 18px;
+
 }
+
 
 .footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1.2fr;
-    gap:30px;
+
+    display:
+    grid;
+
+    grid-template-columns:
+    1.5fr 1fr 1fr;
+
+    gap:
+    30px;
+
 }
 
+
 .footer-grid h3{
-    font-size:13px;
-    margin-bottom:10px;
+
+    font-size:
+    13px;
+
+    margin-bottom:
+    10px;
+
 }
+
 
 .footer-grid p,
 .footer-grid a{
-    display:block;
-    color:#93a2b2;
-    font-size:10px;
-    margin:6px 0;
+
+    display:
+    block;
+
+    color:
+    #93a2b2;
+
+    font-size:
+    10px;
+
+    margin:
+    6px 0;
+
 }
+
 
 .copyright{
-    border-top:1px solid rgba(255,255,255,.08);
-    margin-top:30px;
-    padding-top:14px;
 
-    text-align:center;
+    border-top:
+    1px solid
+    rgba(255,255,255,.08);
 
-    color:#6d7c8e;
-    font-size:9px;
+    margin-top:
+    30px;
+
+    padding-top:
+    14px;
+
+    text-align:
+    center;
+
+    color:
+    #6d7c8e;
+
+    font-size:
+    9px;
+
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
     .nav-links{
-        display:none;
+
+        display:
+        none;
+
     }
+
 
     .exam-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+        repeat(2,1fr);
+
     }
 
-    .process-layout,
-    .about-layout{
-        grid-template-columns:1fr;
+
+    .process-layout{
+
+        grid-template-columns:
+        1fr;
+
     }
+
 
     .security-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+        repeat(2,1fr);
+
     }
+
 
     .contact-grid{
-        grid-template-columns:repeat(3,1fr);
+
+        grid-template-columns:
+        repeat(3,1fr);
+
     }
 
+
     .footer-grid{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+        1fr 1fr;
+
     }
 
 }
 
+
 @media(max-width:560px){
 
     .nav{
-        min-height:70px;
+
+        min-height:
+        70px;
+
     }
+
 
     .nav-button{
-        display:none;
+
+        display:
+        none;
+
     }
+
 
     .hero{
-        min-height:620px;
+
+        min-height:
+        620px;
+
     }
+
 
     .hero-content{
-        padding-bottom:130px;
+
+        padding-bottom:
+        130px;
+
     }
+
 
     .hero h1{
-        font-size:38px;
+
+        font-size:
+        38px;
+
     }
+
 
     .landmarks{
-        height:145px;
+
+        height:
+        145px;
+
     }
+
 
     .landmark{
-        width:18%;
-        height:120px;
+
+        width:
+        18%;
+
+        height:
+        120px;
+
     }
+
 
     .landmark:nth-child(even){
-        display:none;
+
+        display:
+        none;
+
     }
+
 
     .exam-grid{
-        grid-template-columns:1fr;
+
+        grid-template-columns:
+        1fr;
+
     }
+
 
     .security-grid{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+        1fr 1fr;
+
     }
+
 
     .contact-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+        repeat(2,1fr);
+
     }
+
 
     .contact-item:nth-child(2n){
-        border-left:0;
+
+        border-left:
+        0;
+
     }
+
 
     .footer-grid{
-        grid-template-columns:1fr;
+
+        grid-template-columns:
+        1fr;
+
     }
+
 
     section{
-        padding:62px 0;
+
+        padding:
+        62px 0;
+
     }
+
 
     .candidate{
-        min-height:160px;
+
+        min-height:
+        160px;
+
     }
 
+
+    .candidate img{
+
+        min-height:
+        160px;
+
+    }
+
+
     .process-box{
-        padding:24px;
+
+        padding:
+        24px;
+
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
 <div class="container nav">
+
 
 <a href="#home" class="logo">
 
 <div class="logo-icon"></div>
 
 <div class="logo-text">
-<strong>mohajeran 2020</strong>
-<span>مرکز آزمون‌های زبان</span>
+
+<strong>
+mohajeran 2020
+</strong>
+
+<span>
+مرکز آزمون‌های زبان
+</span>
+
 </div>
 
 </a>
@@ -868,17 +1653,25 @@ footer{
 
 <nav class="nav-links">
 
-<a href="#home">خانه</a>
+<a href="#home">
+خانه
+</a>
 
-<a href="#exams">آزمون‌ها</a>
+<a href="#exams">
+آزمون‌ها
+</a>
 
-<a href="#process">نحوه برگزاری</a>
+<a href="#process">
+نحوه برگزاری
+</a>
 
-<a href="#security">امنیت</a>
+<a href="#security">
+امنیت
+</a>
 
-<a href="#about">درباره ما</a>
-
-<a href="#contact">ارتباط با ما</a>
+<a href="#contact">
+ارتباط با ما
+</a>
 
 </nav>
 
@@ -887,15 +1680,19 @@ footer{
 درخواست آزمون
 </a>
 
+
 </div>
 
 </header>
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
+
 
 <div class="hero-content">
 
@@ -903,18 +1700,23 @@ footer{
 مرکز تخصصی آزمون‌های بین‌المللی
 </div>
 
+
 <h1>
 مسیر شما به فرصت‌های جهانی
 </h1>
 
+
 <p class="hero-description">
+
 </p>
+
 
 <div class="hero-buttons">
 
 <a href="#exams" class="btn btn-primary">
 مشاهده آزمون‌ها
 </a>
+
 
 <a href="#process" class="btn btn-secondary">
 نحوه برگزاری
@@ -926,12 +1728,14 @@ footer{
 
 
 
-<!-- LANDMARKS -->
+<!-- =====================================================
+     LANDMARKS
+===================================================== -->
 
 <div class="landmarks">
 
 
-<!-- Empire State Building -->
+<!-- NEW YORK -->
 
 <div class="landmark">
 
@@ -999,7 +1803,7 @@ NEW YORK
 
 
 
-<!-- Statue of Liberty -->
+<!-- STATUE OF LIBERTY -->
 
 <div class="landmark">
 
@@ -1072,7 +1876,7 @@ NEW YORK
 
 
 
-<!-- Big Ben -->
+<!-- BIG BEN -->
 
 <div class="landmark">
 
@@ -1142,7 +1946,7 @@ LONDON
 
 
 
-<!-- Pisa -->
+<!-- PISA -->
 
 <div class="landmark">
 
@@ -1224,7 +2028,7 @@ PISA
 
 
 
-<!-- Eiffel -->
+<!-- EIFFEL -->
 
 <div class="landmark">
 
@@ -1287,7 +2091,7 @@ PARIS
 
 
 
-<!-- Milad -->
+<!-- MILAD -->
 
 <div class="landmark">
 
@@ -1350,11 +2154,14 @@ TEHRAN
 
 
 
-<!-- ================= EXAMS ================= -->
+<!-- =====================================================
+     EXAMS
+===================================================== -->
 
 <section class="exams" id="exams">
 
 <div class="container">
+
 
 <div class="section-header">
 
@@ -1373,7 +2180,6 @@ TEHRAN
 
 
 <div class="exam-grid">
-
 
 
 <!-- IELTS -->
@@ -1402,10 +2208,9 @@ English
 href="https://ielts.org/take-a-test"
 target="_blank"
 rel="noopener"
-class="more-button">
-
+class="more-button"
+>
 اطلاعات بیشتر
-
 </a>
 
 </div>
@@ -1440,10 +2245,9 @@ English
 href="https://www.ets.org/toefl.html"
 target="_blank"
 rel="noopener"
-class="more-button">
-
+class="more-button"
+>
 اطلاعات بیشتر
-
 </a>
 
 </div>
@@ -1478,10 +2282,9 @@ English
 href="https://www.pearsonpte.com/"
 target="_blank"
 rel="noopener"
-class="more-button">
-
+class="more-button"
+>
 اطلاعات بیشتر
-
 </a>
 
 </div>
@@ -1516,10 +2319,9 @@ Online
 href="https://englishtest.duolingo.com/"
 target="_blank"
 rel="noopener"
-class="more-button">
-
+class="more-button"
+>
 اطلاعات بیشتر
-
 </a>
 
 </div>
@@ -1554,10 +2356,9 @@ Français
 href="https://www.france-education-international.fr/"
 target="_blank"
 rel="noopener"
-class="more-button">
-
+class="more-button"
+>
 اطلاعات بیشتر
-
 </a>
 
 </div>
@@ -1592,10 +2393,9 @@ Deutsch
 href="https://www.goethe.de/en/spr/kup/prf.html"
 target="_blank"
 rel="noopener"
-class="more-button">
-
+class="more-button"
+>
 اطلاعات بیشتر
-
 </a>
 
 </div>
@@ -1611,31 +2411,93 @@ class="more-button">
 
 
 
-<!-- ================= PROCESS ================= -->
+<!-- =====================================================
+     PROCESS
+===================================================== -->
 
 <section class="process" id="process">
 
 <div class="container process-layout">
 
 
+<!-- CANDIDATE PHOTOS -->
+
 <div class="candidate-images">
 
-<div class="candidate"></div>
-<div class="candidate"></div>
-<div class="candidate"></div>
-<div class="candidate"></div>
-<div class="candidate"></div>
-<div class="candidate"></div>
+
+<div class="candidate">
+
+<img
+src="images/candidate1.jpg"
+alt="داوطلب آزمون"
+>
+
+</div>
+
+
+<div class="candidate">
+
+<img
+src="images/candidate2.jpg"
+alt="داوطلب آزمون"
+>
+
+</div>
+
+
+<div class="candidate">
+
+<img
+src="images/candidate3.jpg"
+alt="داوطلب آزمون"
+>
+
+</div>
+
+
+<div class="candidate">
+
+<img
+src="images/candidate4.jpg"
+alt="داوطلب آزمون"
+>
+
+</div>
+
+
+<div class="candidate">
+
+<img
+src="images/candidate5.jpg"
+alt="داوطلب آزمون"
+>
+
+</div>
+
+
+<div class="candidate">
+
+<img
+src="images/candidate6.jpg"
+alt="داوطلب آزمون"
+>
+
+</div>
+
 
 </div>
 
 
 
+<!-- PROCESS TEXT -->
+
 <div class="process-box">
+
 
 <h2>
 چگونه آزمون می‌گیریم؟
 </h2>
+
 
 <p class="process-intro">
 
@@ -1643,8 +2505,11 @@ class="more-button">
 
 </p>
 
+
 <div class="slogan">
+
 صداقت و تخصص از ما، اعتماد از شما
+
 </div>
 
 
@@ -1654,7 +2519,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1676,7 +2543,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1698,7 +2567,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1720,7 +2591,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1742,7 +2615,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1764,7 +2639,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1774,7 +2651,7 @@ class="more-button">
 
 <div class="feature-text">
 
-ارائه آموزش حضوری و آنلاین تارسیدن به نمره دلخواه در آزمون
+ارائه آموزش حضوری و آنلاین تا رسیدن به نمره دلخواه در آزمون
 
 </div>
 
@@ -1786,7 +2663,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1808,7 +2687,9 @@ class="more-button">
 
 <div class="feature">
 
-<span class="check">✓</span>
+<span class="check">
+✓
+</span>
 
 <div>
 
@@ -1837,11 +2718,14 @@ class="more-button">
 
 
 
-<!-- ================= SECURITY ================= -->
+<!-- =====================================================
+     SECURITY
+===================================================== -->
 
 <section class="security" id="security">
 
 <div class="container">
+
 
 <div class="section-header">
 
@@ -1953,53 +2837,14 @@ class="more-button">
 
 
 
-<!-- ================= ABOUT ================= -->
-
-<section class="about" id="about">
-
-<div class="container about-layout">
-
-
-<div class="about-art">
-
-<div class="about-tower"></div>
-<div class="about-tower"></div>
-<div class="about-tower"></div>
-<div class="about-tower"></div>
-
-</div>
-
-
-
-<div class="about-copy">
-
-<div class="eyebrow">
-mohajeran 2020
-</div>
-
-<h2>
-</h2>
-
-<p>
-</p>
-
-<p>
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section class="contact" id="contact">
 
 <div class="container">
+
 
 <div class="section-header">
 
@@ -2010,7 +2855,7 @@ mohajeran 2020
 </h2>
 
 <p>
-اطلاعات تماس مجموعه را در این قسمت وارد کنید.
+برای دریافت اطلاعات بیشتر و هماهنگی آزمون با ما در ارتباط باشید.
 </p>
 
 </div>
@@ -2020,6 +2865,8 @@ mohajeran 2020
 <div class="contact-grid">
 
 
+<!-- PHONE -->
+
 <div class="contact-item">
 
 <div class="contact-icon">
@@ -2027,15 +2874,18 @@ mohajeran 2020
 </div>
 
 <h3>
-تلفن
+تلفن تماس
 </h3>
 
 <p>
+09057911063
 </p>
 
 </div>
 
 
+
+<!-- WHATSAPP -->
 
 <div class="contact-item">
 
@@ -2048,11 +2898,14 @@ mohajeran 2020
 </h3>
 
 <p>
+09057911063
 </p>
 
 </div>
 
 
+
+<!-- INSTAGRAM -->
 
 <div class="contact-item">
 
@@ -2065,11 +2918,14 @@ mohajeran 2020
 </h3>
 
 <p>
+mohajer.an.2020
 </p>
 
 </div>
 
 
+
+<!-- TELEGRAM -->
 
 <div class="contact-item">
 
@@ -2082,28 +2938,14 @@ mohajeran 2020
 </h3>
 
 <p>
+Mohajeran 2020
 </p>
 
 </div>
 
 
 
-<div class="contact-item">
-
-<div class="contact-icon">
-✉
-</div>
-
-<h3>
-ایمیل
-</h3>
-
-<p>
-</p>
-
-</div>
-
-
+<!-- ADDRESS -->
 
 <div class="contact-item">
 
@@ -2116,6 +2958,7 @@ mohajeran 2020
 </h3>
 
 <p>
+اشرفی اصفهانی
 </p>
 
 </div>
@@ -2129,11 +2972,14 @@ mohajeran 2020
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
 <div class="container">
+
 
 <div class="footer-grid">
 
@@ -2159,6 +3005,7 @@ mohajeran 2020
 </div>
 
 <p>
+مرکز برگزاری و آموزش آزمون‌های زبان
 </p>
 
 </div>
@@ -2179,6 +3026,10 @@ mohajeran 2020
 آزمون‌ها
 </a>
 
+<a href="#process">
+نحوه برگزاری
+</a>
+
 <a href="#contact">
 ارتباط با ما
 </a>
@@ -2190,33 +3041,20 @@ mohajeran 2020
 <div>
 
 <h3>
-آزمون‌ها
+ارتباط
 </h3>
 
-<a href="#exams">
-IELTS
+<a href="#contact">
+09057911063
 </a>
 
-<a href="#exams">
-TOEFL
+<a href="#contact">
+Instagram: mohajer.an.2020
 </a>
 
-<a href="#exams">
-PTE
+<a href="#contact">
+Telegram: Mohajeran 2020
 </a>
-
-</div>
-
-
-
-<div>
-
-<h3>
-اطلاع‌رسانی
-</h3>
-
-<p>
-</p>
 
 </div>
 
@@ -2227,9 +3065,10 @@ PTE
 
 <div class="copyright">
 
-mohajeran 2020
+© mohajeran 2020
 
 </div>
+
 
 </div>
 
@@ -2237,4 +3076,7 @@ mohajeran 2020
 
 
 </body>
+
 </html>
+```
+
